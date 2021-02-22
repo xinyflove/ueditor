@@ -46,6 +46,7 @@
             'plugins/time.js',
             'plugins/rowspacing.js',
             'plugins/lineheight.js',
+            'plugins/letterspacing.js',
             'plugins/insertcode.js',
             'plugins/cleardoc.js',
             'plugins/anchor.js',

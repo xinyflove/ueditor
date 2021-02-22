@@ -417,3 +417,12 @@
 .edui-default  .edui-for-simpleupload  .edui-icon {
     background-position: -380px 0px;
 }
+
+/**
+ * 字间距样式
+ * @author PeakXin<xinyflove@gmail>
+ */
+.edui-default .edui-for-letterspacing .edui-button-body .edui-icon {
+    background: url(../images/letterspacing.png) center no-repeat;
+    background-size: 100%;
+}
