@@ -120,8 +120,8 @@
             'adapter/editorui.js',
             'adapter/editor.js',
             'adapter/message.js',
-            'adapter/autosave.js'
-
+            'adapter/autosave.js',
+            'plugins/autoformat.js',
         ],
         baseURL = '../_src/';
     for (var i=0,pi;pi = paths[i++];) {

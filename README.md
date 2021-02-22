@@ -6,7 +6,7 @@
 
 1. 扩展文件`./_src/plugins/letterspacing.js`
 
-文件`./_examples/editor_api.js`里面加入`letterspacingplugins`路径
+文件`./_examples/editor_api.js`里面加入`letterspacing`plugins路径
 
 ```js
 'plugins/lineheight.js',
@@ -86,3 +86,56 @@ editorui.letterspacing = function (editor) {
 5. 工具栏添加字间距按钮
 
 文件`./ueditor.config.js`里面`toolbars`时增加`letterspacing`
+
+## 自定义的自动排版工具
+
+1. 扩展文件`./_src/plugins/autoformat.js`
+
+文件`./_examples/editor_api.js`里面加入`autoformat`plugins路径
+
+```js
+'plugins/autoformat.js',
+```
+
+2. 语言包修改
+
+**中文**
+
+文件`./lang/zh-cn/zh-cn.js`在`labelMap`里面添加`'autoformat':'自动排版'`,
+
+**英文**
+
+文件`./lang/en/en.js`在`labelMap`里面添加`'autoformat':'AutoFormat'`,
+
+3. 添加样式
+
+文件`./themes/default/_css/buttonicon.css`里面加上图标，因为有下拉框而且是自定义图标，不能单纯的修改`.edui-default .edui-for-autoformat .edui-icon`，中间要加上`.edui-button-body`
+
+```css
+/**
+ * 自动排班图标
+ */
+.edui-default .edui-for-autoformat .edui-icon {
+    background: url(../images/autoformat.png) center no-repeat !important;
+    background-size: 100%;
+}
+```
+
+4. ui跟编辑器的适配层
+
+在`./_src/adapter/editorui.js`文件里面`btnCmds`上添加按钮标识`autoformat`
+
+```javascript
+//为工具栏添加按钮，以下都是统一的按钮触发命令，所以写在一起
+    var btnCmds = ['undo', 'redo', 'formatmatch',
+        'bold', 'italic', 'underline', 'fontborder', 'touppercase', 'tolowercase',
+        'strikethrough', 'subscript', 'superscript', 'source', 'indent', 'outdent',
+        'blockquote', 'pasteplain', 'pagebreak',
+        'selectall', 'print','horizontal', 'removeformat', 'time', 'date', 'unlink',
+        'insertparagraphbeforetable', 'insertrow', 'insertcol', 'mergeright', 'mergedown', 'deleterow',
+        'deletecol', 'splittorows', 'splittocols', 'splittocells', 'mergecells', 'deletetable', 'drafts', 'autoformat'];
+```
+
+5. 工具栏添加字间距按钮
+
+文件`./ueditor.config.js`里面`toolbars`时增加`autoformat`

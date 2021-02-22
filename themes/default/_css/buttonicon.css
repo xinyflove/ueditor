@@ -426,3 +426,12 @@
     background: url(../images/letterspacing.png) center no-repeat;
     background-size: 100%;
 }
+
+/**
+ * 自动排班图标
+ * @author PeakXin<xinyflove@gmail>
+ */
+.edui-default .edui-for-autoformat .edui-icon {
+    background: url(../images/autoformat.png) center no-repeat !important;
+    background-size: 100%;
+}
