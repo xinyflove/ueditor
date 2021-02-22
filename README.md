@@ -2,7 +2,19 @@
 
 > [UEditor README](./UEditor_README.md)
 
-## 字间距工具
+## 如何打包部署
+
+1. `git clone` 仓库
+
+2. `npm install` 安装依赖（如果没有安装 `grunt` , 请先在全局安装 `grunt`）
+
+> tip: 全局安装 `grunt`命令 `npm install -g grunt-cli`
+
+3. 执行命令 `grunt default`
+
+## 扩展
+
+### 字间距工具
 
 1. 扩展文件`./_src/plugins/letterspacing.js`
 
@@ -87,7 +99,7 @@ editorui.letterspacing = function (editor) {
 
 文件`./ueditor.config.js`里面`toolbars`时增加`letterspacing`
 
-## 自定义的自动排版工具
+### 自定义的自动排版工具
 
 1. 扩展文件`./_src/plugins/autoformat.js`
 
